@@ -5,6 +5,7 @@ import About from '../../pages/About'
 import Header from '../../component/Header'
 import Error from '../../pages/Error'
 import Footer from '../Footer'
+import '../../utils/style/global.sass'
 
 function AppRouter() {
   return (

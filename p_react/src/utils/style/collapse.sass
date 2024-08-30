@@ -1,0 +1,72 @@
+.collapse-contener
+    margin-top: 30px 
+    margin-left: 200px
+    margin-right: 200px
+    display: flex
+    flex-direction: column
+    gap: 30px
+
+    .collapse-item
+ 
+
+        .collapse-title
+            background-color: rgba(255, 96, 96, 1)
+            font-family: 'Montserrat', sans-serif
+            color: white
+            font-size: 24px
+            border-radius: 5px
+            padding: 10px 20px 10px 15px
+            display: flex
+            justify-content: space-between
+
+
+            & img
+                object-fit: contain
+                cursor: pointer
+                transition: transform 0.3s ease
+            
+            & img.active
+                transform : rotate(180deg)
+            
+        .collapse-content
+            background-color : rgba(246, 246, 246, 0.45)
+            border-radius: 0px 0px 5px 5px
+            font-family: 'Montserrat', sans-serif
+            font-size: 18px
+            padding: 20px 20px 20px 20px
+            height: auto
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.3s ease
+            
+
+        .collapse-content.expanded
+            animation: expand 0.3s ease forwards
+            transform-origin: 50% top
+            max-height: 1000px
+
+        .collapse-content.collapsed
+            animation: collapse 0.3s ease forwards
+            transform-origin: 50% top
+
+    .collapse-item.collapsed
+        transition: height 4s ease, opacity 4s ease 4s
+        height: 30px
+
+@keyframes expand
+  0%
+    transform: scaleY(0)
+    opacity: 0
+  100%
+    transform: scaleY(1)
+    opacity: 1
+
+@keyframes collapse
+  0%
+    transform: scaleY(1)
+    opacity: 1
+  100%
+    transform: scaleY(0)
+    opacity: 0
+
+

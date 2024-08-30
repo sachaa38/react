@@ -1,7 +1,15 @@
+import Banner from '../../component/Banner'
+import Card from '../../component/card'
+import backgroundAccueil from '../../assets/background_accueil.jpg'
+
 function Home() {
   return (
     <div>
-      <h1>Page d'accueil</h1>
+      <Banner
+        background={backgroundAccueil}
+        text="Chez vous, partout et ailleurs"
+      />
+      <Card />
     </div>
   )
 }
