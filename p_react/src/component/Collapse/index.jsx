@@ -52,11 +52,12 @@ function Collapse() {
               alt="arrow"
             />
           </div>
-
-          <div
-            className={`collapse-content ${activeIndex.includes(index) ? 'expanded' : 'collapsed'}`}
-          >
-            {col.content}
+          <div className="box">
+            <div
+              className={`collapse-content ${activeIndex.includes(index) ? 'expanded' : 'collapsed'}`}
+            >
+              {col.content}
+            </div>
           </div>
         </div>
       ))}
