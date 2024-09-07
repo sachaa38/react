@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import arrow_left from '../../assets/arrow_left.png'
 import arrow_right from '../../assets/arrow_right.png'
-import '../../utils/style/slideshow.sass'
+import './slideshow.sass'
 
 function Slideshow() {
   const { indexLogement } = useParams()

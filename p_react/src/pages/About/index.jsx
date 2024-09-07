@@ -1,14 +1,14 @@
 import backgroundAbout from '../../assets/background_about.png'
 import Banner from '../../component/Banner'
-import Collapse from '../../component/Collapse'
+import CollapseAbout from '../../component/CollapseAbout'
 import '../../utils/style/about.sass'
-import '../../utils/style/banner.sass'
+import '../../component/Banner/banner.sass'
 
 function About() {
   return (
     <div>
       <Banner background={backgroundAbout} />
-      <Collapse />
+      <CollapseAbout />
     </div>
   )
 }

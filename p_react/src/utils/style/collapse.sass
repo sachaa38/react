@@ -1,55 +1,49 @@
-.collapse-contener
-    margin-top: 30px
-    margin-left: 200px
-    margin-right: 200px
-    display: flex
-    flex-direction: column
-    gap: 30px
+.collapse-item
+        
+    .collapse-title
+        background-color: rgba(255, 96, 96, 1)
+        font-family: 'Montserrat', sans-serif
+        color: white
+        font-size: 24px
+        border-radius: 5px
+        padding: 10px 20px 10px 15px
+        display: flex
+        justify-content: space-between
+        font-weight: 700
 
-    .collapse-item
-           
-        .collapse-title
-            background-color: rgba(255, 96, 96, 1)
-            font-family: 'Montserrat', sans-serif
-            color: white
-            font-size: 24px
-            border-radius: 5px
-            padding: 10px 20px 10px 15px
-            display: flex
-            justify-content: space-between
+        & img
+            object-fit: contain
+            cursor: pointer
+            transition: transform 0.3s ease
+        
+        & img.active
+            transform : rotate(180deg)
 
-            & img
-                object-fit: contain
-                cursor: pointer
-                transition: transform 0.3s ease
+    .box
+        overflow: hidden
+        transform: translateY(0)
+        transition: transform 1s ease-in-out
+
+        .collapse-content
             
-            & img.active
-                transform : rotate(180deg)
+            background-color : rgba(246, 246, 246, 0.45)
+            border-radius: 0px 0px 5px 5px
+            font-family: 'Montserrat', sans-serif
+            font-size: 18px
+            max-height: 0
 
-        .box
-            overflow: hidden
-            transform: translateY(0)
-            transition: transform 1s ease-in-out
+        .collapse-content.expanded
+            transform-origin: 50% top
+            max-height: 1000px
+            animation: expand 0.3s forwards
+            padding: 20px 20px 20px 20px
+            
 
-            .collapse-content
-                
-                background-color : rgba(246, 246, 246, 0.45)
-                border-radius: 0px 0px 5px 5px
-                font-family: 'Montserrat', sans-serif
-                font-size: 18px
-                max-height: 0
-
-            .collapse-content.expanded
-                transform-origin: 50% top
-                max-height: 1000px
-                animation: expand 0.3s forwards
-                padding: 20px 20px 20px 20px
-
-            .collapse-content.collapsed
-                padding-top:0
-                padding-bottom:0
-                transform-origin: 50% bottom
-                animation: collapse 0.3s forwards
+        .collapse-content.collapsed
+            padding-top:0
+            padding-bottom:0
+            transform-origin: 50% bottom
+            animation: collapse 0.3s forwards
 
 
 
@@ -70,3 +64,16 @@
     100%
         transform: translateY(-100%)
         opacity: 0
+
+@media (max-width: 768px)
+
+    .collapse-item
+            
+        .collapse-title
+            font-size: 13px            
+
+        .box
+
+            .collapse-content
+                
+                font-size: 12px

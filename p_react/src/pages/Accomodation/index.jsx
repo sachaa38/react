@@ -1,19 +1,31 @@
-import dataLogement from '../../data.json'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
-
-import '../../utils//style/accomodation.sass'
 import Slideshow from '../../component/Slideshow'
+import AccomodationContent from '../../component/AccomadationContent'
+import { useNavigate } from 'react-router-dom'
+import dataLogement from '../../data.json'
+import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function Accomodation() {
   const { indexLogement } = useParams()
+  const navigate = useNavigate()
+
   const logement = dataLogement[indexLogement]
+
+  useEffect(() => {
+    if (!logement) {
+      navigate('*')
+    }
+  }, [logement, navigate])
+
+  if (!logement) {
+    return null
+  }
+
   return (
     <div>
-      <h1>Fiche Logements</h1>
       <Slideshow />
+      <AccomodationContent />
     </div>
   )
 }
-
 export default Accomodation

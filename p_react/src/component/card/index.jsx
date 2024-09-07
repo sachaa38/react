@@ -1,4 +1,4 @@
-import '../../utils/style/card.sass'
+import './card.sass'
 import dataLogement from '../../data.json'
 import { Link } from 'react-router-dom'
 

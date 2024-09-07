@@ -10,13 +10,15 @@ import '../../utils/style/global.sass'
 function AppRouter() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/Accueil" element={<Home />} />
-        <Route path="*" element={<Error />} />
-        <Route path="/Logement/:indexLogement" element={<Accomodation />} />
-        <Route path="/A-propos" element={<About />} />
-      </Routes>
+      <div className="main">
+        <Header />
+        <Routes>
+          <Route path="/Accueil" element={<Home />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/Logement/:indexLogement" element={<Accomodation />} />
+          <Route path="/A-propos" element={<About />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   )

@@ -1,0 +1,150 @@
+$font-family-primary: 'Montserrat', sans-serif
+$color-primary: rgba(255, 96, 96, 1)
+
+
+.main-content
+    display: flex
+    justify-content: space-between
+    margin-top : 15px
+    margin-bottom: 30px
+
+    .title-and-tags
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        gap: 30px
+            
+        .title-and-content
+
+            h1
+                font-size: 36px
+                font-family: $font-family-primary
+                color : $color-primary
+                margin-top: 0
+                margin-bottom: 0
+
+            p 
+                font-size : 18px
+                font-family: $font-family-primary
+                margin-top : 0
+                margin-bottom: 0
+
+        .tags-contener
+            height: 25px
+            width : 60%
+            display: flex
+            flex-direction: row
+            gap: 8px
+            align-items: center
+
+            .tags   
+                background-color: $color-primary
+                color: white
+                border-radius: 10px
+                font-family: $font-family-primary
+                font-size: 14px
+                padding: 5px 29px 5px 29px
+                font-weight: 700
+
+            
+    .host-and-rates
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        .host-contener
+
+            .host
+                display: flex
+                justify-content: flex-end
+                align-items: center
+                
+                
+
+                & div
+                    color: $color-primary
+                    font-family: $font-family-primary
+                    font-size: 18px
+                    text-align: right
+                    width: 50%
+                    
+                & img
+                    border-radius: 90px
+                    width: 64px
+                    margin-left: 10px
+
+
+
+
+.collapses
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    gap : 50px
+
+    .collapse-acc-contener
+        width: 47%
+
+        .collapse-title
+            border-radius: 10px
+            font-weight: 700
+
+
+@media (max-width: 768px)
+
+    
+    .main-content
+        flex-direction: column
+
+        .title-and-tags
+            
+            .title-and-content
+
+                h1
+                    font-size: 18px
+                    font-weight: 500
+
+                p 
+                    font-size : 14px 
+
+            .tags-contener
+                gap : 5px
+                width : 100%
+
+                .tags   
+                    font-size: 10px  
+                    padding: 3px 15px 3px 15px
+
+
+        .host-and-rates
+            margin-top : 20px
+            flex-direction: row-reverse
+            justify-content: space-between
+            
+
+            .host-contener
+                
+
+                .host 
+                    justify-content: space-between            
+
+                    & div
+                        font-size: 12px
+                        
+                    & img
+                        margin: 0
+                        width: 32px
+
+
+    
+
+
+    .collapses
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap : 30px
+
+        .collapse-acc-contener
+            width: 100%
+        
