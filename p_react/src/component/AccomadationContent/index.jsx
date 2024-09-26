@@ -1,13 +1,8 @@
-import { useParams } from 'react-router-dom'
-import dataLogement from '../../data.json'
 import RatingStars from '../Rating'
 import Collapse from '../Collapse'
 import './accomodationContent.sass'
 
-function AccomodationContent() {
-  const { indexLogement } = useParams()
-  const logement = dataLogement[indexLogement]
-
+function AccomodationContent({ logement }) {
   return (
     <div>
       <div className="main-content">

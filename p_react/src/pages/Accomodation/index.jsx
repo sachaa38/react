@@ -6,10 +6,10 @@ import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 
 function Accomodation() {
-  const { indexLogement } = useParams()
+  const { id } = useParams()
   const navigate = useNavigate()
 
-  const logement = dataLogement[indexLogement]
+  const logement = dataLogement.find((logement) => logement.id === id)
 
   useEffect(() => {
     if (!logement) {
@@ -23,8 +23,8 @@ function Accomodation() {
 
   return (
     <div>
-      <Slideshow />
-      <AccomodationContent />
+      <Slideshow logement={logement} />
+      <AccomodationContent logement={logement} />
     </div>
   )
 }

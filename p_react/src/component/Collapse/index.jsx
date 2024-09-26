@@ -1,5 +1,5 @@
 import arrow from '../../assets/arrow_up.png'
-import '../../utils/style/collapse.sass'
+import './collapse.sass'
 import { useState } from 'react'
 
 function Collapse({ title, content }) {

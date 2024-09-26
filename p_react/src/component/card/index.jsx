@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom'
 function Card() {
   return (
     <div className="card-contener">
-      {dataLogement.map((logement, index) => (
-        <Link to={`/Logement/${index}`} key={logement.id} className="card">
+      {dataLogement.map((logement) => (
+        <Link
+          to={`/Logement/${logement.id}`}
+          key={logement.id}
+          className="card"
+        >
           <img
             className="card-image"
             src={logement.cover}

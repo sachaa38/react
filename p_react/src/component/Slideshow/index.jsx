@@ -1,14 +1,10 @@
-import dataLogement from '../../data.json'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import arrow_left from '../../assets/arrow_left.png'
 import arrow_right from '../../assets/arrow_right.png'
 import './slideshow.sass'
 
-function Slideshow() {
-  const { indexLogement } = useParams()
-  const indexLogementInt = parseInt(indexLogement)
-  const photoLogement = dataLogement[indexLogementInt]?.pictures || []
+function Slideshow({ logement }) {
+  const photoLogement = logement.pictures
   const [indexPhoto, setIndexPhoto] = useState(0)
 
   const handlePhotoPrecedent = () => {
